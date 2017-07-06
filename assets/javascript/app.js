@@ -5,10 +5,11 @@ $(document).ready(function() {
 $("#searchBtn").on("click", function(){
   var query = $("#search").val(); // search item
   console.log(query);
-  var startDate = $("#start").val();
+  var startDate = ($("#start").val()).replace(/[-]/g,"");
   console.log(startDate);
-	var endDate = $("#end").val();
+  var endDate = ($("#end").val()).replace(/[-]/g,"");
   console.log(endDate);
+  
 	// var limit; // # of items to return
 
 	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
@@ -37,4 +38,3 @@ $("#searchBtn").on("click", function(){
 
 	// click event - clear results
 }); //end document ready
-});
