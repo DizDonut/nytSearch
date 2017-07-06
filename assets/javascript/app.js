@@ -10,7 +10,8 @@ $("#searchBtn").on("click", function(){
   var endDate = ($("#end").val()).replace(/[-]/g,"");
   console.log(endDate);
   
-	// var limit; // # of items to return
+  var limit = $("retrieve").val(); // # of items to return
+  console.log(limit);
 
 	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
