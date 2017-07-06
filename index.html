@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<title>New York Times App</title>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			<link rel="stylesheet" href="assets/css/style.css">
+
+		</head>
+
+	<body>
+
+	<div class="row">
+		<div class="col-lg-12 jumbotron">
+				<h1> New York Times Search </h1>
+		</div>
+	</div>
+
+<div class="panel panel-primary">
+	<div class="panel-heading"> Search Parameters </div>
+		<div class="panel-body">
+			<div class="col-lg-12">
+					<form>
+						<label> Search Term </label><br>
+						<input type="text" id="search" data-search="searchInput"><br>
+
+						<label> Number of Records to Retrieve </label><br>
+						<select class="retrieve">
+							<option> 5 </option>
+							<option> 10 </option>
+						</select><br>
+
+						<label> Start Year (Optional)</label><br>
+						<input id="start" data-date="startYear" type="date" placeholder="YYYY"><br>
+
+						<label> End Year (Optional)</label><br>
+						<input id="end" data-date="endYear" type="date" placeholder="YYYY"><br>
+
+						<button id="searchBtn" class="btn btn-md btn-success"><label>Search</label></button>
+						<button id="clear" class="btn btn-md btn-danger"><label> Clear Results </label></button>
+					</form>
+			</div>
+		</div>
+</div>
+
+<div class="panel">
+		<div class="panel-heading"> Top Articles </div>
+			<div class="panel-body" id="articles-go-here">
+
+		</div>
+</div>
+
+
+</div>
+
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+
+	</body>
+
+</html>

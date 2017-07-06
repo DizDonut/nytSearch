@@ -2,13 +2,16 @@ $(document).ready(function() {
 
 	// click event - search button
 
-	var query = $(this).attr(""); // search item
-	var startDate = $(this).attr("") + "0101"; // add "0101"
-	var endDate; // add "1231"
-	var limit; // # of items to return
+$("#searchBtn").on("click", function(){
+  var query = $("#search").val(); // search item
+  console.log(query);
+  var startDate = $("#start").val();
+  console.log(startDate);
+	var endDate = $("#end").val();
+  console.log(endDate);
+	// var limit; // # of items to return
 
 	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
-	
 
 	url += '?' + $.param({
 			  'api-key': "d1e94bb4e2c64a878313efebcc222345",
@@ -17,16 +20,21 @@ $(document).ready(function() {
 	  		  'end_date': endDate, // Format: YYYYMMDD
 	  		  'hl': "true"
 			});
-	
-	$.ajax({
+
+  $.ajax({
 		url: url,
 		method: 'GET',
 	}).done(function(result) {
 		console.log(result); // display API call Object
 		// update DOM, show each result
-	}).fail(function(err) {
-		throw err;
-	});
+  });
+}); //end on click
+
+  //
+	// }).fail(function(err) {
+	// 	throw err;
+	// });
 
 	// click event - clear results
+}); //end document ready
 });
