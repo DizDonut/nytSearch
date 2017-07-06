@@ -13,7 +13,6 @@ $("#searchBtn").on("click", function(){
 
 	var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
-
 	url += '?' + $.param({
 			  'api-key': "d1e94bb4e2c64a878313efebcc222345",
 			  'q': query,
@@ -22,7 +21,7 @@ $("#searchBtn").on("click", function(){
 	  		  'hl': "true"
 			});
 
-	$.ajax({
+  $.ajax({
 		url: url,
 		method: 'GET',
 	}).done(function(result) {
@@ -38,3 +37,4 @@ $("#searchBtn").on("click", function(){
 
 	// click event - clear results
 }); //end document ready
+});
